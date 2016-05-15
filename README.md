@@ -103,7 +103,9 @@ epoch = datetime.date.toordinal(algo.get_datetime())
 
 This is why the x-axis looks weird, but it allows backtests run between different time periods to line up correctly on the charts.
 
+You can see this working here:
 
+![_config.yml](https://raw.githubusercontent.com/jimgoo/jimgoo.github.io/master/images/tensorboard-and-zipline/tb-strats.png)
 
 
 
