@@ -44,6 +44,8 @@ def initialize(algo, window_length=5):
 
     if algo.tb_log_dir:
         algo.tensorboard = TensorBoard(log_dir=algo.tb_log_dir)
+    else:
+        algo.tensorboard = None
 
 
 def handle_data(algo, data):
@@ -98,8 +100,9 @@ def handle_data(algo, data):
     # to tensorboard as well:
     algo.record(x_bar=x_bar)
 
-    # record algo stats to tensorboard
-    algo.tensorboard.log_algo(algo)
+    if algo.tensorboard is not None:
+        # record algo stats to tensorboard
+        algo.tensorboard.log_algo(algo)
 
 
 def rebalance_portfolio(algo, data, desired_port):
