@@ -4,7 +4,7 @@
 
 ## TensorBoard Setup
 
-If you have a working installation of Zipline, then the only thing you need to do is install TensorFlow. This can be done easility with `pip`, which is fleshed out in great detail [here](https://www.tensorflow.org/versions/r0.8/get_started/os_setup.html#pip-installation). For Python 2 it boils down to one of the following:
+If you have a working installation of Zipline, then the only thing you need to do is install TensorFlow. This can be done easily with `pip`, which is fleshed out in great detail [here](https://www.tensorflow.org/versions/r0.8/get_started/os_setup.html#pip-installation). For Python 2 it boils down to one of the following:
 
 ```
 # Ubuntu/Linux 64-bit, CPU only:
