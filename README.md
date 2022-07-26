@@ -27,7 +27,7 @@ tensorboard --logdir=/tmp/
 
 where the `--logdir` argument is the parent directory to where the data for all of your backtest runs will be saved. Go to [http://localhost:6006](http://localhost:6006) and you should see this:
 
-![_config.yml](https://raw.githubusercontent.com/jimgoo/jimgoo.github.io/master/images/tensorboard-and-zipline/tb-blank.png)
+![blank page](img/tb-blank.png)
 
 ## Using TensorBoard with Zipline
 
@@ -42,17 +42,17 @@ This runs three parameterizations of the [OLMAR example backtest](https://github
 ```
 flush_secs: How often, in seconds, to flush the added summaries 
             and events to disk. [default 120]
-```            
+```
 
 ### Comparing backtests
 
 Here's a comparison of the returns of each backtest once all have finished:
 
-![_config.yml](https://raw.githubusercontent.com/jimgoo/jimgoo.github.io/master/images/tensorboard-and-zipline/tb-olmar.png)
+![OLMAR strategy](img/tb-olmar.png)
 
 The regex filters let you group different stats together, so to see stats with "number" in the name:
 
-![_config.yml](https://raw.githubusercontent.com/jimgoo/jimgoo.github.io/master/images/tensorboard-and-zipline/tb-regex2.png)
+![Example of regex filter](img/tb-regex2.png)
 
 You can see right away the lower values of epsilon result in lots more trading. Pretty useful for getting some quick insight.
 
@@ -60,7 +60,7 @@ You can see right away the lower values of epsilon result in lots more trading. 
 
 Any variable recorded with `zipline.algorithm.TradingAlgorithm.record` is also logged to TensorBoard. We've done that here with the `x_bar` variable in OLMAR:
 
-![_config.yml](https://raw.githubusercontent.com/jimgoo/jimgoo.github.io/master/images/tensorboard-and-zipline/tb-xbar.png)
+![Viewing a recorded variable](img/tb-xbar.png)
 
 ## Logging process
 
@@ -105,7 +105,7 @@ This is why the x-axis looks weird, but it allows backtests run between differen
 
 You can see this working here:
 
-![_config.yml](https://raw.githubusercontent.com/jimgoo/jimgoo.github.io/master/images/tensorboard-and-zipline/tb-strats.png)
+![Comparing several strategies](img/tb-strats.png)
 
 
 
