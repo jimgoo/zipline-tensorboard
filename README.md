@@ -1,25 +1,10 @@
 # TensorBoard as a Zipline dashboard
 
-[Zipline](https://github.com/quantopian/zipline) is a Pythonic algorithmic trading library for backtesting and trading quantitative strategies. [TensorBoard](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/tensorboard) is a visualization tool provided with the deep learning library [TensorFlow](https://www.tensorflow.org). These two can be used together to create a dashboard that monitors and compares Zipline backtests. You don't even need to know a thing about deep learning.
+[Zipline](https://github.com/quantopian/zipline) is a Pythonic algorithmic trading library for backtesting and trading quantitative strategies. [TensorBoard](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/tensorboard) is a visualization tool provided with the deep learning library [TensorFlow](https://www.tensorflow.org). These two can be used together to create a dashboard that monitors and compares Zipline backtests. You don't even need to know/care a thing about deep learning.
 
 ## TensorBoard Setup
 
-If you have a working installation of Zipline, then the only thing you need to do is install TensorFlow. This can be done easily with `pip`, which is fleshed out in great detail [here](https://www.tensorflow.org/versions/r0.8/get_started/os_setup.html#pip-installation). For Python 2 it boils down to one of the following:
-
-```
-# Ubuntu/Linux 64-bit, CPU only:
-$ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
-
-# Ubuntu/Linux 64-bit, GPU enabled. Requires CUDA toolkit 7.5 and CuDNN v4.  For
-# other versions, see "Install from sources" below.
-$ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
-
-# Mac OS X, CPU only:
-$ sudo easy_install --upgrade six
-$ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/mac/tensorflow-0.8.0-py2-none-any.whl
-```
-
-If you're not doing any deep learning and just want to use TensorBoard, go with the `CPU only` option. Once TensorFlow is installed, you can start TensorBoard from the shell with:
+If you have a working installation of Zipline, then the only thing you need to do is install TensorFlow. This can be done [with `pip`](https://www.tensorflow.org/versions/r0.8/get_started/os_setup.html#pip-installation) or better yet `conda`. If you just want to use TensorBoard, go with the `CPU only` option. Once TensorFlow is installed, you can start TensorBoard from the shell with:
 
 ```bash
 tensorboard --logdir=/tmp/
@@ -37,7 +22,7 @@ To start logging some info, run the Zipline example `olmar_tensorboard.py` to ge
 python olmar_tensorboard.py
 ```
 
-This runs three parameterizations of the [OLMAR example backtest](https://github.com/quantopian/zipline/blob/master/zipline/examples/olmar.py) on the Dow 30 from 2004 to 2016. Each one has takes a while to run, but as they run you can see the basic live stats displayed in TensorBoard, including any variables recorded with `algo.record`. You may have to hit refresh on occasion, but there's a setting in `tensorboard.py` to control how often data is written to the log files:
+This runs three parameterizations of the [OnLine Moving Average Reversion (OLMAR) example backtest](https://github.com/quantopian/zipline/blob/master/zipline/examples/olmar.py) on the Dow 30 from 2004 to 2016. Each one has takes a while to run, but as they run you can see the basic live stats displayed in TensorBoard, including any variables recorded with `algo.record`. You may have to hit refresh on occasion, but there's a setting in `tensorboard.py` to control how often data is written to the log files:
 
 ```
 flush_secs: How often, in seconds, to flush the added summaries 
