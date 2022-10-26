@@ -1,6 +1,6 @@
 # TensorBoard as a Zipline dashboard
 
-[Zipline](https://github.com/quantopian/zipline) is a Pythonic algorithmic trading library for backtesting and trading quantitative strategies. [TensorBoard](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/tensorboard) is a visualization tool provided with the deep learning library [TensorFlow](https://www.tensorflow.org). These two can be used together to create a dashboard that monitors and compares Zipline backtests. You don't even need to know/care a thing about deep learning.
+[Zipline](https://github.com/quantopian/zipline) is a python library for backtesting trading strategies. [TensorBoard](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/tensorboard) is a visualization tool provided with the deep learning library [TensorFlow](https://www.tensorflow.org). These two can be used together to create a dashboard that monitors and compares Zipline backtests, and you don't even need to know/care a thing about deep learning.
 
 ![Comparing several strategies](img/tb-strats.png)
 
